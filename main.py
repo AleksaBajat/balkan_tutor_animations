@@ -10,6 +10,7 @@ class FirstScene(Scene):
         qd_equation.font_size = 128.0
 
         self.play(Create(qd_equation))
+        self.wait(2)
 
         # Highlight the coefficients
 
@@ -21,9 +22,9 @@ class FirstScene(Scene):
         qd_equation_spoiler.set_color_by_tex("a", GREEN)
 
         self.play(Transform(qd_equation, qd_equation_spoiler))
+        self.wait(2)
 
         # Happy and Sad parabola
-        self.wait(1)
 
         # Clear the screen
         self.play(FadeOut(qd_equation))
@@ -123,7 +124,6 @@ class FirstScene(Scene):
         qd_solution_3[0][9].set_fill(YELLOW)
         qd_solution_3[0][10].set_fill(YELLOW)
 
-        self.wait(2)
         self.play(Transform(qd_solution_2, qd_solution_3))
         self.wait(2)
 
